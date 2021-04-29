@@ -73,3 +73,12 @@ circle (310 , 80 ,  30 );//naranja oscuro
 fill( 0 , 255 , 27  );// verde flour
 
 circle (190 , 80 ,  30 );// verde flour
+///////////////////////////////////////
+//textos
+fill(5);
+text( "Amarillo" , 230 , 54 );
+text( "Rojo" , 370 , 280 );
+text ( "Violeta" , 233 , 360); 
+text (" Naranja " , 360 , 120 ); 
+text ( " Verde " , 100 , 120 );
+text ( " Azul " , 105 , 280 );
