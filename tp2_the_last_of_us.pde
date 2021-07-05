@@ -1,3 +1,7 @@
+//ESTEBAN ALMEIDA - 88271/9 - TP2 - OBRA ELEJIDA : THE LAST OF US -//
+
+
+
 int x;
 float y;
 PImage imagen; 
