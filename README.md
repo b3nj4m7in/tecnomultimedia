@@ -1,75 +1,32 @@
-//ESTEBAN ALMEIDA
 
-//CIRCULO CROMATICO 
+// https://youtu.be/ckNerhItDps
 
-size(500,400); 
-//
-background(255);
-//
+float   a ;
+boolean linea=true;
+float col ;
 
-strokeWeight(5);
+void setup () {
+  size(600, 600);
 
-circle (250 , 200 , 340 );
-//primer triangulo 
-strokeWeight(7);
-line( 120 , 280 , 250 , 50 ); 
-line( 250 , 50 , 380 , 280 ); 
-line (120 , 280 , 380 , 280 ); 
+  rectMode (CENTER ) ;
+  col += random (-222, 27 );
+  strokeWeight (16);
+}
 
-//segundo triangulo
-strokeWeight(4);
-line(380 , 120 , 120 , 120 ); 
-line (380 , 120 , 250 , 360);
-line (120 , 120 , 250 , 360);
-///////////////////////////////////////////
-
-noStroke();
-fill(250,255,0);//amarillo
-
-circle (250 , 50 , 70 );//circulo amarillo
-
-fill(255,0,0);//rojo
-
-circle (380 , 280 , 70 );//circulo rojo
-
-fill(0,0,255);//azul
-
-circle (120 , 280 , 70 );//circulo azul
-
-fill(255 ,179 , 0 );//naranja 
-
-circle ( 380 , 120 , 70);//naranja 
-
-fill(0, 152 , 1 );//verde
-
-circle ( 120 , 120 , 70 );//verde
-
-fill(195 , 0 ,255 );// violeta 
-
-circle ( 250 , 360 ,  70 );//violeta
-
-/////////////////////////////////////
-
-fill(255, 72 , 0 ); //naranja rojiso
-
-circle (380 , 200 , 30 );//naranja rojiso 
-
- fill(0, 157, 156 );//verde azulado
- 
-circle (120 , 200 , 30 );//verde azulado
-
-fill(157 , 0 , 60 );//bordo
-
-circle (310 , 315 , 30 );//bordo 
-
-fill( 141 , 0 , 157 );//violeta oscuro  
-
-circle (190 , 315 , 30 );//violeta oscuro
-
-fill( 216 , 174 , 35  );//naranja oscuro
-
-circle (310 , 80 ,  30 );//naranja oscuro
-
-fill( 0 , 255 , 27  );// verde flour
-
-circle (190 , 80 ,  30 );// verde flour
+void draw () {
+  
+  float mx = map(mouseX, 0, width, 0, 255 ) ;
+  float my = map (mouseY, 0, height, 0, 255 );
+  
+  background(mx, 0.1, my );
+  stroke ( mx,  0 , my );
+  fill(my, 100 , mx  );
+  
+  translate (width/2, height/2 );
+  for (int i = 0; i<100; i++ ) {
+    scale(0.95);
+    rotate(radians(a));
+    rect(0, 0, 300, 300);
+  }
+  a+=0.1 ;
+}
